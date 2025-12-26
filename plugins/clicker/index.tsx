@@ -26,7 +26,7 @@ export const settings = () => (
 )
 let allowedUsers;
 let lastPlayTime = 0;
-
+store.ids = []
 const processedMessageIds = new Set();
 
 export function onLoad() {
