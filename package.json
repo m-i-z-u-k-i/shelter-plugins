@@ -4,5 +4,10 @@
     "@uwu/shelter-defs": "^1.4.1"
   },
   "type": "module",
-  "workspaces": ["plugins/*"]
+  "workspaces": [
+    "plugins/*"
+  ],
+  "dependencies": {
+    "solid-js": "^1.9.10"
+  }
 }
