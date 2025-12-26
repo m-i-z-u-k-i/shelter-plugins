@@ -38,6 +38,7 @@ var import_web = __toESM(require_web(), 1);
 const { GuildMemberStore, ChannelStore, SelectedChannelStore, RelationshipStore, SoundStore } = shelter.flux.storesFlat;
 const { util: { getFiber, reactFiberWalker }, observeDom, util: { log }, plugin: { store } } = shelter;
 const { TextArea } = shelter.ui;
+store.ids = [];
 const { subscribe } = shelter.plugin.scoped.flux;
 const settings = () => (0, import_web.createComponent)(TextArea, {
 	get value() {
@@ -49,7 +50,6 @@ const settings = () => (0, import_web.createComponent)(TextArea, {
 	"resize-y": true
 });
 let lastPlayTime = 0;
-store.ids = [];
 const processedMessageIds = new Set();
 function onLoad() {
 	subscribe("MESSAGE_CREATE", handleDispatch);
