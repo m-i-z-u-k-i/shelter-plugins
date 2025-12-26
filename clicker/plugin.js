@@ -49,6 +49,7 @@ const settings = () => (0, import_web.createComponent)(TextArea, {
 	"resize-y": true
 });
 let lastPlayTime = 0;
+store.ids = [];
 const processedMessageIds = new Set();
 function onLoad() {
 	subscribe("MESSAGE_CREATE", handleDispatch);
